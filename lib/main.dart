@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fordacommute/screens/onboarding_screen.dart';
+import 'package:fordacommute/values/styles/themes.dart';
 
 void main() => runApp(const MainApp());
 
@@ -7,8 +9,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MainScreen(),
+    return MaterialApp(
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.system,
+      home: const OnboardingScreen(),
     );
   }
 }

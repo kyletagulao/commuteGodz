@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:fordacommute/values/styles/text_themes.dart';
 
 class AppTheme {
   static ThemeData lightTheme = ThemeData(
       brightness: Brightness.light,
+      textTheme: AppTextTheme.lightTextTheme,
       primarySwatch: const MaterialColor(0xFF332885, <int, Color>{
         50: Color(0xFF88acd5),
         100: Color(0xFF709bcc),
@@ -20,6 +22,7 @@ class AppTheme {
 
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
+    textTheme: AppTextTheme.darkTextTheme,
     primarySwatch: const MaterialColor(0xFF332885, <int, Color>{
       50: Color(0xFF88acd5),
       100: Color(0xFF709bcc),
