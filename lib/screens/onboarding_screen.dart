@@ -31,6 +31,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             enableSideReveal: true,
             liquidController: controller.controller,
             enableLoop: false,
+            onPageChangeCallback: (activePageIndex) {
+              controller.onPageChangedCallback(activePageIndex);
+            },
           ),
           Positioned(
             top: 40,
