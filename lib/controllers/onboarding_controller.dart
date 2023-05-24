@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 
-import '../screens/onboarding_page.dart';
+import '../screens/pages/onboarding_page.dart';
 import '../values/colors/colors.dart';
 import '../values/images/image_strings.dart';
 import '../values/models/onboarding_model.dart';

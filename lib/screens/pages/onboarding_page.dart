@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../values/models/onboarding_model.dart';
+import '../../values/models/onboarding_model.dart';
 
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({
@@ -18,7 +18,7 @@ class OnboardingPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const SizedBox(height: 60.0,),
+            const SizedBox(height: 20.0,),
             Image(image: AssetImage(model.image),
               ),
             Column(
@@ -28,14 +28,14 @@ class OnboardingPage extends StatelessWidget {
                     .of(context)
                     .textTheme
                     .headlineSmall,),
-                const SizedBox(height: 10.0,),
+                const SizedBox(height: 20.0,),
                 Text(model.subTitle, textAlign: TextAlign.center, style: Theme
                     .of(context)
                     .textTheme
                     .titleSmall,),
               ],
             ),
-            const SizedBox(height: 150.0,),
+            const SizedBox(height: 90.0,),
           ],
         )
     );
