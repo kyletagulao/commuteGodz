@@ -16,6 +16,7 @@ class MainApp extends StatelessWidget {
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
       home: const OnboardingScreen(),
+      debugShowCheckedModeBanner: false,
       // initialRoute: '/',
       // routes: {
       //   '/': (context) => const OnboardingScreen(),
