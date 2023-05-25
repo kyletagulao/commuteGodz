@@ -39,10 +39,10 @@ class AppTextTheme {
       color: const Color(0xFF435E55),
     ), // Body 2
     labelLarge: GoogleFonts.hammersmithOne(
-      color: const Color(0xFFFF5858),
+      color: const Color(0xFFF1F1F1),
     ), // Button
     labelMedium: GoogleFonts.hammersmithOne(
-      color: const Color(0xFFFF5858),
+      color: const Color(0xFFF1F1F1),
     ),
     bodySmall: GoogleFonts.hammersmithOne(
       color: const Color(0xFF5F5F5F),
@@ -87,8 +87,11 @@ class AppTextTheme {
       color: const Color(0xFF435E55),
     ), // Body 2
     labelLarge: GoogleFonts.hammersmithOne(
-      color: const Color(0xFFFF5858),
+      color: const Color(0xFFF1F1F1),
     ), // Button
+    labelMedium: GoogleFonts.hammersmithOne(
+      color: const Color(0xFFF1F1F1),
+    ),
     bodySmall: GoogleFonts.hammersmithOne(
       color: const Color(0xFFD5D5D5),
     ), // Caption

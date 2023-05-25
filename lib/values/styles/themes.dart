@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fordacommute/values/colors/colors.dart';
 import 'package:fordacommute/values/styles/text_themes.dart';
 
 class AppTheme {
@@ -37,4 +38,12 @@ class AppTheme {
       }
     ),
   );
+
+  static ElevatedButtonThemeData elevatedButtonLightTheme = ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      backgroundColor: tPrimaryColor,
+      foregroundColor: tWhiteColor,
+    )
+  );
+
 }

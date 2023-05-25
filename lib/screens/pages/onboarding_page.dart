@@ -20,7 +20,7 @@ class OnboardingPage extends StatelessWidget {
           children: [
             const SizedBox(height: 20.0,),
             Image(image: AssetImage(model.image),
-              ),
+            ),
             Column(
               children: [
                 Text(
