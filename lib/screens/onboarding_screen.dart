@@ -15,14 +15,11 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-
-  int currentPage = 0;
+  bool visibleBox = false;
+  final controller = OnboardingController();
 
   @override
   Widget build(BuildContext context) {
-
-    final controller = OnboardingController();
-
     return Scaffold(
       body: Stack(
         alignment: Alignment.center,
@@ -34,7 +31,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             liquidController: controller.controller,
             enableLoop: false,
             onPageChangeCallback: (activePageIndex) {
-              controller.onPageChangedCallback(activePageIndex);
+              setState(() {
+                controller.onPageChangedCallback(activePageIndex);
+                visibleBox = (controller.currentPage.value == 2);
+              });
             },
           ),
           Positioned(
@@ -48,21 +48,23 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           // if (controller.currentPage.value == 2)
           Positioned(
             bottom: 110,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(140, 50),
-                  backgroundColor: tPrimaryColor,
-                  foregroundColor: tWhiteColor,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(40.0),
-                  )
-              ),
-              onPressed: () {
-                // Redirect to the welcome screen
-                // Navigator.pushReplacementNamed(context, '/welcome');
-              },
-              child: Text(tGetStarted, style: Theme.of(context).textTheme.labelLarge,),
-            ),
+            child: Visibility(
+              visible: visibleBox,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(140, 50),
+                    backgroundColor: tPrimaryColor,
+                    foregroundColor: tWhiteColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(40.0),
+                    )
+                ),
+                onPressed: () {
+                  // Redirect to the welcome screen
+                  // Navigator.pushReplacementNamed(context, '/welcome');
+                },
+                child: Text(tGetStarted, style: Theme.of(context).textTheme.labelLarge,),
+            ))
           ),
           Obx(
                 () => Positioned(
