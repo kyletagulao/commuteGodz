@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fordacommute/controllers/onboarding_controller.dart';
 import 'package:fordacommute/values/colors/colors.dart';
-import 'package:fordacommute/values/strings/text_strings.dart';
 import 'package:get/get.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -44,27 +42,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               onPressed: () => controller.skip(),
               child: const Text("Skip", style: TextStyle(color: tWhiteColor)),
             ),
-          ),
-          // if (controller.currentPage.value == 2)
-          Positioned(
-            bottom: 110,
-            child: Visibility(
-              visible: visibleBox,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(140, 50),
-                    backgroundColor: tPrimaryColor,
-                    foregroundColor: tWhiteColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(40.0),
-                    )
-                ),
-                onPressed: () {
-                  // Redirect to the welcome screen
-                  // Navigator.pushReplacementNamed(context, '/welcome');
-                },
-                child: Text(tGetStarted, style: Theme.of(context).textTheme.labelLarge,),
-            ))
           ),
           Obx(
                 () => Positioned(
